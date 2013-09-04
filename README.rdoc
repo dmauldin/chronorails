@@ -2,7 +2,7 @@
 
 Chronorails handles adding virtual attributes to your models (with suitable validations, etc) allowing you to set date and duration fields with natural language text.
 
-- Usage
+== Usage
 
 For a hypothetical Rails model:
 
