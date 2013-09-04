@@ -29,10 +29,10 @@ Then in your form:
 
 == Contribute
 
- * Fork
- * Hack
- * Test
- * Pull request :)
+* Fork
+* Hack
+* Test
+* Pull request :)
 
 == License
 
