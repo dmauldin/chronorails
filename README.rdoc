@@ -2,21 +2,38 @@
 
 Chronorails handles adding virtual attributes to your models (with suitable validations, etc) allowing you to set date and duration fields with natural language text.
 
+== Installation
+
+  gem install chronorails
+
 == Usage
 
 For a hypothetical Rails model:
 
   class RomanticMeeting < ActiveRecord::Base
-    attr_accessible :length, :start
+    attr_accessible :length, :start # Integer and DateTime DB fields, respectively
 
     include Chronorails::ChronicAccessors
     chronic_field :start, :required => true, :validates => true
     chronic_duration_field :length, :validates => true
   end
 
-...include the accessors module, and start wrapping your attributes with either Chronic or Chronic Duration.
+...include the accessors module, and config Chronorails to start wrapping your attributes with either Chronic or Chronic Duration virtual attributes.
 
+Then in your form:
 
+  <%= f.text_field :chronic_start %>
+  <%= f.text_field :chronic_duration_length %>
 
+...you can use the virtual attributes for your fields, entering natural language date and duration information that will be parsed into the regular fields (or will generate validation errors).
 
-This project rocks and uses MIT-LICENSE.
+== Contribute
+
+ * Fork
+ * Hack
+ * Test
+ * Pull request :)
+
+== License
+
+Copyright © 20013 Simon Hildebrandt, released under the MIT license
