@@ -14,8 +14,8 @@ For a hypothetical Rails model:
     attr_accessible :length, :start # Integer and DateTime DB fields, respectively
 
     include Chronorails::ChronicAccessors
-    chronic_field :start, :required => true, :validates => true
-    chronic_duration_field :length, :validates => true
+    chronic_field :start, :required => true
+    chronic_duration_field :length
   end
 
 ...include the accessors module, and config Chronorails to start wrapping your attributes with either Chronic or Chronic Duration virtual attributes.
@@ -26,6 +26,17 @@ Then in your form:
   <%= f.text_field :chronic_duration_length %>
 
 ...you can use the virtual attributes for your fields, entering natural language date and duration information that will be parsed into the regular fields (or will generate validation errors).
+
+The 'required' option prevents setting the attributes with blank values; the 'validates' option controls the generation of validators (defaults to true) and the 'accessible' option controls the generation of Rails 3 'attr_accessible' calls (also defaults to true.)
+
+== Testing
+
+  git clone git@github.com:simonhildebrandt/chronorails.git
+  cd chronorails
+  bundle install
+  rake db:create
+  rake db:test:prepare
+  bundle exec rspec spec
 
 == Contribute
 

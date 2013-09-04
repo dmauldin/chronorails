@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    chronorails (0.0.1)
+    chronorails (0.0.2)
       chronic
       chronic_duration
       rails (~> 3.2.13)
