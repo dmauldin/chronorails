@@ -6,17 +6,13 @@ Chronorails handles adding virtual attributes to your models (with suitable vali
 
 For a hypothetical Rails model:
 
-```ruby
+  class RomanticMeeting < ActiveRecord::Base
+    attr_accessible :length, :start
 
-class RomanticMeeting < ActiveRecord::Base
-  attr_accessible :length, :start
-
-  include Chronorails::ChronicAccessors
-  chronic_field :start, :required => true, :validates => true
-  chronic_duration_field :length, :validates => true
-end
-
-```
+    include Chronorails::ChronicAccessors
+    chronic_field :start, :required => true, :validates => true
+    chronic_duration_field :length, :validates => true
+  end
 
 ...include the accessors module, and start wrapping your attributes with either Chronic or Chronic Duration.
 
