@@ -1,3 +1,5 @@
 = Chronorails
 
+Chronorails handles adding virtual attributes to your models (with suitable validations, etc) allowing you to set date and duration fields with natural language text.
+
 This project rocks and uses MIT-LICENSE.
