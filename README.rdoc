@@ -18,7 +18,7 @@ For a hypothetical Rails model:
     chronic_duration_field :length
   end
 
-...include the accessors module, and config Chronorails to start wrapping your attributes with either Chronic or Chronic Duration virtual attributes.
+...include the accessors module, and configure Chronorails to start wrap your attributes with either Chronic or Chronic Duration virtual attributes.
 
 Then in your form:
 

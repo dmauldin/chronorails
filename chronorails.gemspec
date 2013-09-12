@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/simonhildebrandt/chronorails"
   s.summary     = "Chronorails adds chronic and chronic_duration support to your Rails models."
   s.description = "Chronorails handles adding virtual attributes to your models (with suitable validations, etc) allowing you to set date and duration fields with natural language text."
+  s.license     = 'MIT'
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
